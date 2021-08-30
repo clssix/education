@@ -1,0 +1,133 @@
+/* 头部 */
+.header{
+    background-color: #ffffff;
+    
+    padding:1.5em 0em;
+    position: sticky;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100000;
+
+    transition:all linear .4s;
+    padding-bottom: 1em;
+
+    .navbar{
+        background-color: white;
+        border:0px;
+        border-radius: 0px;
+        margin: 0;
+
+        .navbar-brand{
+            color:#fff;
+            text-transform: uppercase;
+            font-family: OSBold;
+        }
+
+        .nav{
+            a{
+                color:black;
+                text-transform: uppercase;
+                border-bottom:3px solid transparent;
+                transition:all linear .3s;
+                font-weight: bold;
+                font-size: 1.3em;
+
+                &:hover{
+                    border-bottom:3px solid #1749b0;
+                    color: #1749b0;
+                }
+            }
+        }
+    }
+ 
+
+    @media screen and (max-width:768px){
+        &{
+            background-color: #ffffff;
+            .navbar{
+                .nav{
+                    a{
+                        text-align: center;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and(max-width:630px) {
+        .navbar{
+            .container{
+                .navbar-header{
+                    .logo{
+                       
+                        img{
+                            width: 17%;
+                            margin-left: 2em;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+
+}
+
+// 底部
+.footer{
+    background-color: #1c1e24;
+    padding: 5em 0em;
+    .nav{
+        text-align: center;
+        color: #6f6f6f;
+       
+        a{
+           padding-left: 2em;
+           color: #6f6f6f;
+           text-decoration: none;
+           margin-bottom: 2em;
+        }
+    }
+}
+
+// gotop
+#gotop{
+    position: fixed;
+    bottom: 90px;
+    right: 0;
+    width: 80px;
+    cursor: pointer;
+    z-index: -99999;
+    opacity: 0;
+    transition: all linear .3s;
+    &:hover{
+        animation: hua 1s;
+    }
+    @keyframes hua {
+        0%{
+            transform: scale3d(1,1,1);
+        }
+        30%{
+            transform: scale3d(1.25,0.75,1);
+        }
+        40%{
+            transform: scale3d(0.75,1.25,1);
+        }
+        50%{
+            transform: scale3d(1.15,0.85,1);
+        }
+        65%{
+            transform: scale3d(0.95,1.05,1);
+        }
+        75%{
+            transform: scale3d(1.05,0.95,1);
+        }
+        100%{
+            transform: scale3d(1,1,1);
+        }
+    }
+}
